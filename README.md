@@ -14,9 +14,8 @@
 ## Project Overview
 ESP32 Control Studio is a real-time, cross-platform robotics controller designed to communicate with ESP32 or any UDP-enabled hardware. Designed for ultra-low latency, the system allows users to control robots, drones, or embedded vehicles using a customizable dual-joystick dashboard featuring live telemetry feedback.
 
-### [📥 Download the APK](app-release.apk) 
+### [📥 Download the APK](https://drive.google.com/file/d/1xwh1oCDihZ8jxyN_Y7pKCLaXx3liQVi9/view?usp=sharing) 
 
-*(Add your latest `app-release.apk` to the root of this repo or GitHub Releases to enable direct downloads).*
 
 ---
 
