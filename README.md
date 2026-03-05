@@ -60,9 +60,8 @@ The project includes an extensive array of developer documentation. Dive in to u
 
 | Connection | Dashboard |
 |:---:|:---:|
-| <img src="assets/screenshots/connection_screen.png" width="250"> | <img src="assets/screenshots/dashboard.png" width="250"> |
-| **Telemetry View** | **Controller In Action** |
-| <img src="assets/screenshots/telemetry_panel.png" width="250"> | <img src="assets/screenshots/controller_ui.png" width="250"> |
+| <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/connection_screen.jpg" width="250"> | <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/control_panel_active.jpg" width="250"> |
+
 
 ---
 
