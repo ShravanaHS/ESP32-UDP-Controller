@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=ESP32" alt="Logo" width="150" height="150" />
+  <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/consol.png" alt="Logo" width="250" height="250" />
   
   # ESP32 Control Studio
 
