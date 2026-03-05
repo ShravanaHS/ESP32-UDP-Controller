@@ -5,15 +5,16 @@ ESP32 Control Studio uses a highly optimized, fixed-length 8-byte UDP packet to 
 ## Packet Structure Diagram
 
 ```mermaid
-packet-beta
-    0-7: "Byte 0: Header (0xAA)"
-    8-15: "Byte 1: Joy1 X (0-255)"
-    16-23: "Byte 2: Joy1 Y (0-255)"
-    24-31: "Byte 3: Joy2 X (0-255)"
-    32-39: "Byte 4: Joy2 Y (0-255)"
-    40-47: "Byte 5: Buttons"
-    48-55: "Byte 6: Toggles"
-    56-63: "Byte 7: Checksum"
+graph LR
+    subgraph "8-Byte Control Datagram"
+        B0[Byte 0: 0xAA] --- B1[Byte 1: Joy1 X]
+        B1 --- B2[Byte 2: Joy1 Y]
+        B2 --- B3[Byte 3: Joy2 X]
+        B3 --- B4[Byte 4: Joy2 Y]
+        B4 --- B5[Byte 5: Buttons]
+        B5 --- B6[Byte 6: Toggles]
+        B6 --- B7[Byte 7: XOR Checksum]
+    end
 ```
 
 ## Byte Breakdown
