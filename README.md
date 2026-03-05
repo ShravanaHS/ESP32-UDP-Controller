@@ -1,77 +1,72 @@
-# 🎮 ESP32 Control Studio
+<div align="center">
+  <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=ESP32" alt="Logo" width="150" height="150" />
+  
+  # ESP32 Control Studio
 
-[![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=Flutter&logoColor=white)](https://flutter.dev)
-[![ESP32](https://img.shields.io/badge/ESP32-%23E7352C.svg?style=flat&logo=espressif&logoColor=white)](https://www.espressif.com/en/products/socs/esp32)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  A professional, ultra-low latency robotics controller built with Flutter and ESP32.
 
-A professional-grade Flutter application designed for high-performance, real-time control and telemetry monitoring of ESP32-based robotics and IoT devices.
+  [![GitHub release](https://img.shields.io/github/v/release/shravanahs/ESP32-UDP-Controller?style=flat-square)](https://github.com/shravanahs/ESP32-UDP-Controller/releases/latest)
+  [![Platform](https://img.shields.io/badge/platform-Android-green.svg?style=flat-square)](#)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](#)
+  
+</div>
+
+## Project Overview
+ESP32 Control Studio is a real-time, cross-platform robotics controller designed to communicate with ESP32 or any UDP-enabled hardware. Designed for ultra-low latency, the system allows users to control robots, drones, or embedded vehicles using a customizable dual-joystick dashboard featuring live telemetry feedback.
+
+### [📥 Download the APK](app-release.apk) 
+
+*(Add your latest `app-release.apk` to the root of this repo or GitHub Releases to enable direct downloads).*
 
 ---
 
-## ✨ Features
+## 🔥 Features
+- **Dual Analog Joysticks:** Precise control mapped cleanly to 0-255 byte values.
+- **Ultra-Low Latency UDP:** Fire-and-forget control loop at 50Hz for immediate hardware response.
+- **Action Buttons & Toggles:** Configurable switches sent via an efficient bitmask payload.
+- **Real-Time Telemetry:** Bi-directional loop allows the ESP32 to stream battery voltage and sensor data back to the dashboard.
+- **Cross-Platform Foundation:** Built on Flutter, ready to compile for Android, iOS, or Web.
 
-- ⚡ **Real-time Telemetry**: Monitor battery voltage, system temperature, and connection ping in real-time.
-- 🕹️ **Dual-Joystick Control**: Precise analog control for movement and auxiliary systems.
-- 🔴 **System Arming**: Safety-first approach with a dedicated system arming toggle.
-- 🔘 **Custom Command Buttons**: 8 programmable buttons for triggering specific device actions.
-- 🌐 **UDP Protocol**: Low-latency communication optimized for real-time responsiveness.
+---
+
+## ⚡ Quick Start
+
+### 1. Hardware Setup (ESP32)
+1. Read the [ESP32 Firmware Guide](docs/esp32-firmware.md) to upload the minimal UDP receiver code to your board.
+2. Ensure your ESP32 is powered on and connected to the same local WiFi network as your phone.
+
+### 2. Mobile App Setup
+1. Install the APK linked above.
+2. Open **ESP32 Control Studio**.
+3. On the Connection Screen, enter the local IP address printed by your ESP32 (e.g., `192.168.1.100`).
+4. Tap **Connect** to open the Dashboard and start controlling!
+
+---
+
+## 📚 Full Documentation
+
+The project includes an extensive array of developer documentation. Dive in to understand the system architecture or learn how to extend it.
+
+- 📖 **[The Development Journey](docs/journey.md)** – *Ideation, tech selection, and problem-solving.*
+- 🏛️ **[System Architecture](docs/architecture.md)** – *Mermaid diagrams, app workflows, and data flow.*
+- 📱 **[App Usage Guide](docs/app-usage.md)** – *How to navigate the dashboard UI and features.*
+- ⚙️ **[ESP32 Firmware Guide](docs/esp32-firmware.md)** – *Connect motors, parse packets, and send telemetry.*
+- 📡 **[UDP Protocol Spec](docs/protocol.md)** – *Detailed breakdown of the 8-byte control datagrams.*
 
 ---
 
 ## 📸 Screenshots
 
-| Connection Screen | Control Panel (Idle) | Control Panel (Active) |
-| :---: | :---: | :---: |
-| ![Connection](docs/screenshots/connection_screen.jpg) | ![Idle](docs/screenshots/control_panel_idle.jpg) | ![Active](docs/screenshots/control_panel_active.jpg) |
+*Note: Add real images inside the `assets/screenshots/` folder.*
+
+| Connection | Dashboard |
+|:---:|:---:|
+| <img src="assets/screenshots/connection_screen.png" width="250"> | <img src="assets/screenshots/dashboard.png" width="250"> |
+| **Telemetry View** | **Controller In Action** |
+| <img src="assets/screenshots/telemetry_panel.png" width="250"> | <img src="assets/screenshots/controller_ui.png" width="250"> |
 
 ---
 
-## 🚀 Getting Started
-
-### 📱 Flutter Application
-1. **Prerequisites**: [Flutter SDK](https://docs.flutter.dev/get-started/install) installed.
-2. **Setup**:
-   ```bash
-   cd app/control_studio
-   flutter pub get
-   ```
-3. **Run**:
-   ```bash
-   flutter run
-   ```
-
-### 🔌 ESP32 Firmware
-- The firmware expects a UDP server listening for control packets and broadcasting telemetry data.
-- Default Port: `8883`
-
----
-
-## 🛠️ Project Structure
-
-- `/app/control_studio`: The core Flutter application.
-- `/docs`: Technical documentation and assets.
-- `mock_server.dart`: A Dart-based mock server for testing the app without physical hardware.
-- `mock_esp32_server.py`: A Python-based mock server for cross-platform validation.
-
----
-
-## 📜 Protocol Specification
-
-The system uses a custom binary protocol over UDP for maximum efficiency.
-
-| Packet Type | Description | Frequency |
-| :--- | :--- | :--- |
-| **Control** | Joystick positions, button states, switches | 20Hz - 50Hz |
-| **Telemetry** | Battery, Temp, System Status | 5Hz - 10Hz |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-## ⚖️ License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<div align="center">
+  <sub>Built with ❤️ by Shravana HS.</sub>
+</div>
