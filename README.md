@@ -3,7 +3,7 @@
   
   # ESP32 Control Studio
 
-  A professional, ultra-low latency robotics controller built with Flutter and ESP32.
+  A Scalable ultra-low latency robotics controller built for ESP32.
 
   [![GitHub release](https://img.shields.io/github/v/release/shravanahs/ESP32-UDP-Controller?style=flat-square)](https://github.com/shravanahs/ESP32-UDP-Controller/releases/latest)
   [![Platform](https://img.shields.io/badge/platform-Android-green.svg?style=flat-square)](#)
@@ -12,10 +12,11 @@
 </div>
 
 ## Project Overview
-ESP32 Control Studio is a real-time, cross-platform robotics controller designed to communicate with ESP32 or any UDP-enabled hardware. Designed for ultra-low latency, the system allows users to control robots, drones, or embedded vehicles using a customizable dual-joystick dashboard featuring live telemetry feedback.
+ESP32 Control Studio is a real-time, cross-platform robotics controller designed to communicate with ESP32. Designed for ultra-low latency, the system allows users to control robots, drones, or embedded vehicles using a customizable dual-joystick dashboard featuring live telemetry feedback.
 
+<div align="center">
 ### [📥 Download the APK](https://drive.google.com/file/d/1xwh1oCDihZ8jxyN_Y7pKCLaXx3liQVi9/view?usp=sharing) 
-
+</div>
 
 ---
 
@@ -37,7 +38,7 @@ ESP32 Control Studio is a real-time, cross-platform robotics controller designed
 ### 2. Mobile App Setup
 1. Install the APK linked above.
 2. Open **ESP32 Control Studio**.
-3. On the Connection Screen, enter the local IP address printed by your ESP32 (e.g., `192.168.1.100`).
+3. On the Connection Screen, enter the local IP address printed by your ESP32 (Check through Serial Monitor [e.g., `192.168.1.100`]).
 4. Tap **Connect** to open the Dashboard and start controlling!
 
 ---
