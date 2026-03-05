@@ -40,18 +40,25 @@ flowchart TD
 
 The application itself is structured into distinct layers to promote maintainability:
 
-```mermaid
-architecture-beta
-    group app(Cloud)[Flutter Application]
-    
-    service ui(Server)[UI Layer: Screens & Widgets] in app
-    service core(Database)[Core Logic: Providers & State] in app
-    service net(Disk)[Network Layer: UDP Client/Server] in app
-    
-    ui:R --> L:core
-    core:R --> L:net
-```
+```mermaid 
+graph TD
+    subgraph "Flutter Application (GCS)"
+        UI[<b>UI Layer</b><br/>Screens & Widgets]
+        Logic[<b>Core Logic</b><br/>Providers & State Management]
+        Net[<b>Network Layer</b><br/>TCP/UDP Client/Server]
+    end
 
+    subgraph "Hardware"
+        ESP[<b>ESP32 Firmware</b><br/>Packet Parser & GPIO Control]
+        Actuators[<b>LEDs, Motors</b>]
+    end
+
+    %% Data Flow
+    UI <--> Logic
+    Logic <--> Net
+    Net -- "TCP (Control) / UDP (Telemetry)" --> ESP
+    ESP --> Actuators
+```
 *(Note: Mermaid architecture diagrams offer a structural view. The layers translate to `/screens`, `/providers`, and `/services` inside the Flutter codebase.)*
 
 ## Network Packet Flow
@@ -72,7 +79,7 @@ sequenceDiagram
     ESP32->>ESP32: udp.parsePacket()
     ESP32->>ESP32: Validate Header & Checksum
     ESP32->>ESP32: Extract X/Y values
-    ESP32->>Motors: Update PWM (Drive Motors)
+    ESP32->>GPIO: Drive LEDs,Motors
     
     Note over ESP32,Flutter App: Telemetry Update (Every 500ms)
     ESP32-)Router: Send Telemetry (Battery, Temp)
@@ -86,12 +93,27 @@ Inside the Flutter application, state is managed entirely through the `Provider`
 
 ```mermaid
 flowchart LR
-    Widget1[JoystickWidget] -->|updateJoystick()| Provider[ControllerState Provider]
-    Widget2[ToggleSwitchWidget] -->|updateToggle()| Provider
+    subgraph "User Input (UI Layer)"
+        Widget1[JoystickWidget]
+        Widget2[ToggleSwitchWidget]
+    end
+
+    subgraph "State Management (Logic Layer)"
+        Provider[<b>ControllerState Provider</b>]
+    end
+
+    subgraph "Output (Network Layer)"
+        UDPService[UDP/TCP Service]
+        UI[Dashboard UI Rebuild]
+    end
+
+    %% Flow Connections
+    Widget1 -->|updateJoystick| Provider
+    Widget2 -->|updateToggle| Provider
     
-    Provider -->|notifyListeners()| UI[DashboardScreen]
-    Provider -->|Timer Loop| UDPService[UDP Service]
-    UDPService -->|Sends Data| Network
+    Provider -->|notifyListeners| UI
+    Provider -->|Stream/Timer| UDPService
+    UDPService -->|Binary Packet| ESP32((ESP32))
 ```
 
 This ensures that UI components like buttons and joysticks only interact with the unified state, which acts as the single source of truth for generating the outgoing datagrams.
