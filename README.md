@@ -49,7 +49,7 @@ ESP32 Control Studio is a real-time, cross-platform robotics controller designed
 ### 2. Mobile App Setup
 1. Install the [APK linked](https://drive.google.com/file/d/1xwh1oCDihZ8jxyN_Y7pKCLaXx3liQVi9/view?usp=sharing).
 2. Open **ESP32 Control Studio**.
-3. On the Connection Screen, enter the local IP address printed by your ESP32 (Check through Serial Monitor [e.g., `192.168.1.100`]).
+3. On the Connection Screen, enter the local IP address printed by your ESP32 (Check through Serial Monitor e.g. `192.168.1.100`).
 4. Tap **Connect** to open the Dashboard and start controlling!
 
 ---
