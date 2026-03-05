@@ -66,6 +66,11 @@ The project includes an extensive array of developer documentation. Dive in to u
 ---
 
 ## 📸 Screenshots
+<p align="center">
+  <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/spiderman" width="700"/>
+  <br>
+  <em>ESP32 UDP Controller Demo</em>
+</p>
 <div align="center">
 <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/connection_screen.jpg"> 
 Connection Screen
