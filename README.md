@@ -5,18 +5,29 @@
 
   A Scalable ultra-low latency robotics controller built for ESP32.
 
-  [![GitHub release](https://img.shields.io/github/v/release/shravanahs/ESP32-UDP-Controller?style=flat-square)](https://github.com/shravanahs/ESP32-UDP-Controller/releases/latest)
-  [![Platform](https://img.shields.io/badge/platform-Android-green.svg?style=flat-square)](#)
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](#)
-  
+<p align="center">
+  <a href="https://github.com/shravanahs/ESP32-UDP-Controller">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/ESP32-E63946?style=for-the-badge&logo=espressif&logoColor=white" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Flutter-00F2FF?style=for-the-badge&logo=flutter&logoColor=black" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Antigravity-FF00FF?style=for-the-badge&logo=airplay&logoColor=white" />
+  </a>
+  <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android&logoColor=white" />
+</p>
 </div>
 
 ## Project Overview
 ESP32 Control Studio is a real-time, cross-platform robotics controller designed to communicate with ESP32. Designed for ultra-low latency, the system allows users to control robots, drones, or embedded vehicles using a customizable dual-joystick dashboard featuring live telemetry feedback.
 
-<div align="center">
-### [📥 Download the APK](https://drive.google.com/file/d/1xwh1oCDihZ8jxyN_Y7pKCLaXx3liQVi9/view?usp=sharing) 
-</div>
+
+### [Download the APK](https://drive.google.com/file/d/1xwh1oCDihZ8jxyN_Y7pKCLaXx3liQVi9/view?usp=sharing) 
+
 
 ---
 
@@ -36,7 +47,7 @@ ESP32 Control Studio is a real-time, cross-platform robotics controller designed
 2. Ensure your ESP32 is powered on and connected to the same local WiFi network as your phone.
 
 ### 2. Mobile App Setup
-1. Install the APK linked above.
+1. Install the [APK linked](https://drive.google.com/file/d/1xwh1oCDihZ8jxyN_Y7pKCLaXx3liQVi9/view?usp=sharing.
 2. Open **ESP32 Control Studio**.
 3. On the Connection Screen, enter the local IP address printed by your ESP32 (Check through Serial Monitor [e.g., `192.168.1.100`]).
 4. Tap **Connect** to open the Dashboard and start controlling!
