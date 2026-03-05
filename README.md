@@ -56,11 +56,13 @@ The project includes an extensive array of developer documentation. Dive in to u
 
 ## 📸 Screenshots
 
-*Note: Add real images inside the `assets/screenshots/` folder.*
+<img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/connection_screen.jpg"> 
+Connection Screen
+<img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/control_panel_active.jpg">
+Control Panel
+<img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/control_panel_idle.jpg">
+Control Panel
 
-| Connection | Dashboard |
-|:---:|:---:|
-| <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/connection_screen.jpg" width="250"> | <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/control_panel_active.jpg" width="250"> |
 
 
 ---
