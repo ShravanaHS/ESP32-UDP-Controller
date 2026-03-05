@@ -55,7 +55,7 @@ The project includes an extensive array of developer documentation. Dive in to u
 ---
 
 ## 📸 Screenshots
-
+<div align="center">
 <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/connection_screen.jpg"> 
 Connection Screen
 <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/control_panel_active.jpg">
@@ -63,10 +63,6 @@ Control Panel
 <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/control_panel_idle.jpg">
 Control Panel
 
-
+</div>
 
 ---
-
-<div align="center">
-  <sub>Built with ❤️ by Shravana HS.</sub>
-</div>
