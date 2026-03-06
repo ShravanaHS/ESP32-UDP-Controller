@@ -41,7 +41,9 @@ The dashboard features two analog joysticks.
 The top bar provides essential telemetry data:
 - **Connection Status:** Shows active network status.
 - **Latency / Ping:** Displays the UDP round-trip time.
-
-![Telemetry Panel](https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/spiderman.gif)
-
 *Note: Telemetry data requires your ESP32 firmware to actively transmit data back to the phone on the predefined return port.*
+<p align="center">
+  <img src="https://github.com/ShravanaHS/ESP32-UDP-Controller/blob/main/docs/screenshots/spiderman.gif">
+  <br>
+  <em>ESP32 UDP Controller Demo</em>
+</p>
